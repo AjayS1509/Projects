@@ -72,7 +72,7 @@ class connectorDB:
                 tkinter.messagebox.showinfo("Mysql Connection","Record Entered Successfully")
 
         def DisplayData():
-            sqlCon = pymysql.connect(host = "localhost",user = "root",password = "Ajay@15",database = "student_data")
+            sqlCon = pymysql.connect(host = "localhost",user = "root",password = "",database = "student_data")
             cur = sqlCon.cursor()
             cur.execute("select * from student ")
             result = cur.fetchall()
