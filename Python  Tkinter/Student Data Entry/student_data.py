@@ -57,7 +57,7 @@ class connectorDB:
             if StudentID.get() == "" or Firstname.get() == "" or Surname.get() == "":
                 tkinter.messagebox.showerror("Mysql Connection","Enter correct Details !")
             else:
-                sqlCon = pymysql.connect(host = "localhost",user = "root",password = "Ajay@15",database = "student_data")
+                sqlCon = pymysql.connect(host = "localhost",user = "root",password = "",database = "student_data")
                 cur = sqlCon.cursor()
                 cur.execute("insert into student values(%s,%s,%s,%s,%s,%s)",(
                 StudentID.get(),
